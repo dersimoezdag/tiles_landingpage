@@ -1,4 +1,3 @@
-
 h1,
 h2,
 h3,
@@ -8,53 +7,9 @@ h6 {
     font-family: 'proxima-nova', sans-serif;
 }
 
-.ct-featureBox h4 {
-    padding: 10px 0 5px;
-    color: #252525;
-    font-size: 2.2rem;
-    font-weight: 600;
-}
-
-.ct-featureBox p {
-    margin-bottom: 0;
-}
-
-.ct-featureBox {
-    width: 100%;
-    background: #fff;
-    padding: 40px 55px;
-    margin: 15px 0;
-    min-height: 250px;
-    display: table;
-    text-align: center;
-    color: inherit;
-    -webkit-transition: background-color, 0.25s, ease-in-out;
-    transition: background-color, 0.25s, ease-in-out;
-}
-
-.ct-featureBox .inner {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
-}
-
-.ct-featureBox .image {
-    text-align: center;
-}
-
-.ct-featureBox .image img {
-    display: inline-block;
-}
-
 img,
 figure {
     max-width: 100%;
-}
-
-@include media-breakpoint-up(md) {
-    .ct-featureBox {
-        padding: 20px 55px;
-    }
 }
 
 .main-content {
@@ -72,4 +27,9 @@ figure {
         padding-right: 15px;
         padding-left: 15px;
     }
+}
+
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
 }
