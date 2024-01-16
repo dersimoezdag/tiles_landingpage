@@ -1,0 +1,13 @@
+.app-bar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: red;
+    margin: 0;
+    margin-bottom: 10px;
+
+    & .app-bar-content {
+        padding: 5px 20px;
+    }
+}
