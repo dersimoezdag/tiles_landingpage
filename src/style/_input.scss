@@ -1,0 +1,83 @@
+.material-textfield {
+    position: relative;
+    margin-bottom: 45px;
+    max-width: 8rem;
+  
+    label {
+      color: #999;
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: 0.2s ease all;
+    }
+  
+    input {
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $primary;
+      background-color: transparent;
+      color: $primary;
+      border-radius: 0;
+      &:focus {
+        outline: none;
+      }
+      &:valid ~ label,
+      &:focus ~ label {
+        top: -20px;
+        font-size: 14px;
+        color: $primary;
+      }
+    }
+  
+    .bar {
+      position: relative;
+      display: block;
+      width: 100%;
+      &::before {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 0;
+        position: absolute;
+        background: $primary;
+        transition: 0.2s ease all;
+      }
+    }
+  
+    input:focus ~ .bar::before {
+      width: 100%;
+    }
+  
+    .highlight {
+      position: absolute;
+      height: 60%;
+      width: 100%;
+      top: 25%;
+      left: 0;
+      pointer-events: none;
+      opacity: 0.5;
+    //   background: $primary;
+      transition: 0.2s ease all;
+    }
+  
+    input:valid ~ .highlight,
+    input:focus ~ .highlight {
+      animation: inputHighlighter 0.3s ease;
+    }
+  
+    @keyframes inputHighlighter {
+      from {
+        background: $primary;
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+  }
