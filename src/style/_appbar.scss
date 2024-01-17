@@ -16,16 +16,16 @@
     justify-content: space-between;
 
     & h1 {
-      font-size: 1rem; //für den kleinsten Bildschirm
+      font-size: .8rem; //für den kleinsten Bildschirm
 
       @include media-breakpoint-up(sm) {
         //für den Bildschirm sm
-        font-size: 3rem;
+        font-size: 1rem;
       }
 
       @include media-breakpoint-up(md) {
         //für den Bildschirm md
-        font-size: 3rem;
+        font-size: 1.3rem;
       }
 
       @include media-breakpoint-up(lg) {
