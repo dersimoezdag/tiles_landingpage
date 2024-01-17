@@ -1,14 +1,56 @@
 .app-bar {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: $background-secondary;
-    margin: 0;
-    margin-bottom: 10px;
-    z-index: 9999;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $background-secondary;
+  margin: 0;
+  margin-bottom: 10px;
+  z-index: 9999;
 
-    & .app-bar-content {
-        padding: 5px 20px;
+  & .app-bar-content {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & h1 {
+      font-size: 1rem; //für den kleinsten Bildschirm
+
+      @include media-breakpoint-up(sm) {
+        //für den Bildschirm sm
+        font-size: 3rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        //für den Bildschirm md
+        font-size: 3rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        //für den Bildschirm lg
+        font-size: 2rem;
+      }
     }
+  }
+}
+
+.footer-bar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $background-secondary;
+  margin: 0;
+  margin-bottom: 10px;
+  z-index: 9999;
+
+  & .footer-bar-content {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
