@@ -1,9 +1,4 @@
-$container-max-widths: (
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
-);
+$container-max-widths: $breakpoints;
 
 $grid-columns: 12;
 $grid-gutter-width: 30px;
@@ -29,7 +24,7 @@ $grid-gutter-width: 30px;
     flex-wrap: wrap;
     margin-right: -$grid-gutter-width / 2;
     margin-left: -$grid-gutter-width / 2;
-    
+
 }
 
 @mixin make-col-ready() {
@@ -58,8 +53,19 @@ $grid-gutter-width: 30px;
     @include make-col-ready();
 
     @for $i from 12 through 1 {
+        &-xs-#{$i} {
+            @include make-col-ready();
+
+            @include media-breakpoint-up(xs) {
+                @include make-col($i);
+            }
+        }
+    }
+
+    @for $i from 12 through 1 {
         &-sm-#{$i} {
             @include make-col-ready();
+
             @include media-breakpoint-up(sm) {
                 @include make-col($i);
             }
@@ -69,6 +75,7 @@ $grid-gutter-width: 30px;
     @for $i from 12 through 1 {
         &-md-#{$i} {
             @include make-col-ready();
+
             @include media-breakpoint-up(md) {
                 @include make-col($i);
 
@@ -76,23 +83,32 @@ $grid-gutter-width: 30px;
         }
     }
 
-
-
     @for $i from 12 through 1 {
         &-lg-#{$i} {
             @include make-col-ready();
+
             @include media-breakpoint-up(lg) {
                 @include make-col($i);
             }
         }
     }
 
-
-
     @for $i from 12 through 1 {
         &-xl-#{$i} {
             @include make-col-ready();
+
             @include media-breakpoint-up(xl) {
+                @include make-col($i);
+            }
+        }
+    }
+
+
+    @for $i from 12 through 1 {
+        &-xxl-#{$i} {
+            @include make-col-ready();
+
+            @include media-breakpoint-up(xxl) {
                 @include make-col($i);
             }
         }
