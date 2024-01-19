@@ -13,7 +13,7 @@ $grid-gutter-width: 30px;
     @each $breakpoint, $container-max-width in $max-widths {
         @if $container-max-width !=null {
             @media (min-width: $container-max-width) {
-                max-width: $container-max-width;
+                // max-width: $container-max-width;
             }
         }
     }
