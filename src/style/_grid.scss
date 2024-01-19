@@ -1,6 +1,6 @@
 $container-max-widths: $breakpoints;
 
-$grid-columns: 12;
+$grid-columns: 14;
 $grid-gutter-width: 30px;
 
 @mixin make-container($max-widths: $container-max-widths, $padding-x: $grid-gutter-width) {
@@ -52,7 +52,7 @@ $grid-gutter-width: 30px;
 .col {
     @include make-col-ready();
 
-    @for $i from 12 through 1 {
+    @for $i from $grid-columns through 1 {
         &-xs-#{$i} {
             @include make-col-ready();
 
@@ -62,7 +62,7 @@ $grid-gutter-width: 30px;
         }
     }
 
-    @for $i from 12 through 1 {
+    @for $i from $grid-columns through 1 {
         &-sm-#{$i} {
             @include make-col-ready();
 
@@ -72,7 +72,7 @@ $grid-gutter-width: 30px;
         }
     }
 
-    @for $i from 12 through 1 {
+    @for $i from $grid-columns through 1 {
         &-md-#{$i} {
             @include make-col-ready();
 
@@ -83,7 +83,7 @@ $grid-gutter-width: 30px;
         }
     }
 
-    @for $i from 12 through 1 {
+    @for $i from $grid-columns through 1 {
         &-lg-#{$i} {
             @include make-col-ready();
 
@@ -93,7 +93,7 @@ $grid-gutter-width: 30px;
         }
     }
 
-    @for $i from 12 through 1 {
+    @for $i from $grid-columns through 1 {
         &-xl-#{$i} {
             @include make-col-ready();
 
@@ -104,7 +104,7 @@ $grid-gutter-width: 30px;
     }
 
 
-    @for $i from 12 through 1 {
+    @for $i from $grid-columns through 1 {
         &-xxl-#{$i} {
             @include make-col-ready();
 
