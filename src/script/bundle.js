@@ -1,6 +1,5 @@
 function start() {
-    console.log('test')
-
+  console.log('test');
 }
 
 window.onload = start();
